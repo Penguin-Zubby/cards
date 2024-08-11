@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/jpg" href="flashcard-image.jpg" />
+  <link rel="stylesheet" href="style.css">
+  <title>Flashcards</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!--The heading and nav section-->
+  <header>
+    <div class="container-box">
+      <div id="header">
+        <h1> Flashcard</h1>
+        <div><!--Buttons section -->
+          <button type="button" id="show_card_box">New card</button>
+          <button type="button" id="del_all_cards">Delete cards</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--Box for user input-->
+  <div class="container-box">
+    <div id="gen_card">
+      <h2>Create Flashcard</h2>
+      <label for="question">Question</label>
+      <textarea id="question" maxlength="280"></textarea>
+      <br />
+      <label for="answer">Answer</label>
+      <textarea id="answer" maxlength="280"></textarea>
+      <br />
+      <div>
+        <button id="save_card">Create</button>
+        <button id="close_card_box">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Section for when flashcards are created-->
+  <section>
+    <div class="container-box">
+      <div id="flashcards"></div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

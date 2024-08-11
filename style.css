@@ -1,0 +1,157 @@
+/*Importing font from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+/*removing all padding and setting margins*/
+*{
+    padding: 0;
+    margin: 2px 0px;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    background-color:rgb(109, 106, 106);
+}
+
+button {
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    border: 1rem;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(228, 78, 78);
+}
+
+button:hover{
+    background-color:rgb(251, 161, 161);
+}
+
+.container-box{
+    width: 95%;
+    margin: 1.5rem auto;
+}
+
+.header {
+    background-color:white;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    align-items: center;
+    margin: 0rem 3rem;
+    min-width: 70px;
+    padding: 5px 4rem;
+    background: white;
+}
+
+#header button{
+    border: 1px solid;
+}
+
+#gen_card{
+    width: 370px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 12px;
+    background: white;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+#gen_card h2{
+    color:black;
+    text-align: center;
+}
+
+#gen_card textarea{
+    width: 100%;
+    font-family:'Josefin Sans', sans-serif;
+    border: 1px solid;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+#gen_card button{width: fit-content;}
+
+#flashcards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.flashcard {
+    width: 370px;
+    height: 200px;
+    word-wrap: break-word;
+    margin: 10px;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+    position: relative;
+}
+
+.flashcard h2{
+    font-size: 1rem;
+}
+
+.fa-minus{
+    top: 3%;
+    right: 2%;
+    position: absolute;
+    color: #1a1a1a;
+    transition: 0.3s ease-out;
+}
+
+.fa-minus:hover{
+    color: rgba(248, 88, 107, 0.774);
+}
+
+/*Media queries*/
+@media(max-width:1280px){
+    .container-box{width: 100%}
+}
+
+@media(max-width:768px) {
+    .container-box{width: 100%}
+    .flashcard{
+        margin: auto;
+    }
+
+    .flashcard{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+}
+
+@media(max-width:480px) {
+    .container-box{width:100%}
+    #header{
+        padding: 20px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #gen_card{width: 95%;}
+
+    .flashcard{width: 100%;}
+}
+@media(max-width:320px) {
+    .container-box{width: 100%}
+    #header{
+        padding: 20px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #gen_card{width: 95%;}
+
+    .flashcard{width:95%}
+}
