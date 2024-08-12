@@ -62,13 +62,10 @@ flashcardMaker = (text, delThisIndex) => {
   //Create delete button on each flashcard
   const delButton = document.createElement("button");
   delButton.textContent = "Delete";
-  delButton.style.display = "block";
-  delButton.style.margin = "auto";
-  delButton.style.marginTop = "50px";
-  delButton.style.marginBottom = "5px";
-  delButton.style.padding = "8px 12px";
+  delButton.style.cssText =
+    "display: block; margin: auto; margin-top: 50px; padding: 8px 12px;";
   delButton.addEventListener("click", (noRepeat) => {
-    noRepeat.stopPropagation();
+    noRepeat.stopPropagation(); //disable the flashcard click event
     contentArray.splice(delThisIndex, 1);
     localStorage.setItem("items", JSON.stringify(contentArray));
     window.location.reload();
@@ -84,11 +81,11 @@ addFlashcard = () => {
   const question = document.querySelector("#question");
   const answer = document.querySelector("#answer");
 
-  var flashcard_info = {
+  var flashcard_value = {
     my_question: question.value,
     my_answer: answer.value,
   };
-  contentArray.push(flashcard_info);
+  contentArray.push(flashcard_value);
   localStorage.setItem("items", JSON.stringify(contentArray));
   flashcardMaker(
     contentArray[contentArray.length - 1],
