@@ -81,6 +81,12 @@ addFlashcard = () => {
   const question = document.querySelector("#question");
   const answer = document.querySelector("#answer");
 
+  //validate if the textarea is empty
+  if (question.value.trim() === " " || answer.value.trim() === "") {
+    alert("Both question and answer fields must be filled out.");
+    return;
+  }
+
   var flashcard_value = {
     my_question: question.value,
     my_answer: answer.value,
