@@ -53,6 +53,12 @@ flashcardMaker = (text, delThisIndex) => {
   flashcard.appendChild(answer);
   flashcard.appendChild(del);
 
+  //this function is a loop that will keep adding the empty flashcard to the screen
+  flashcard.addEventListener("click", () => {
+    if (answer.style.display === "none") answer.style.display = "block";
+    else answer.style.display = "none";
+  });
+
   //Create delete button on each flashcard
   const delButton = document.createElement("button");
   delButton.textContent = "Delete";
